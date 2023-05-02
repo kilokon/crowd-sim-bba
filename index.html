@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Crowd Simulation</title>
+<meta name="author" content="Aviik Chakraborty"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/night.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">Crowd Simulation
+</section>
+
+<section>
+<section id="slide-orgf820d8f">
+<h2 id="orgf820d8f">Outline</h2>
+<ul>
+<li>Introduction and history</li>
+<li>Simulated Crowd in Films</li>
+<li>Writing and Producing Crowd Scenes</li>
+<li>Other Applications of Crowd Simulation</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org7a463b4">
+<h2 id="org7a463b4">What is Crowds Simulation?</h2>
+</section>
+<section id="slide-org7a463b4-split">
+
+<div id="org2dbe34c" class="figure">
+<p><img src="./images/crwd_wiki.png" alt="crwd_wiki.png" height="200%," width="200%" />
+</p>
+</div>
+
+</section>
+<section id="slide-org7a463b4-split">
+<div class="org-src-container">
+
+<pre  class="src src-text"   ><code trim>My way of putting it all togther:
+
+Replication of a real word situation where a bunch of
+assets are moving along or interacting with each other.
+</code></pre>
+</div>
+
+
+</section>
+<section id="slide-org7a463b4-split">
+
+<div id="org07fdd85" class="figure">
+<p><img src="./images/crwd_acm.png" alt="crwd_acm.png" height="200%," width="200%" />
+</p>
+</div>
+
+
+</section>
+<section id="slide-org7a463b4-split">
+<div class="org-src-container">
+
+<pre  class="src src-text"   ><code trim>- "Crowd Simulation" by Daniel Thalmann and Soraia Raupp Musse,
+published in the ACM SIGGRAPH Computer Graphics journal in 2007.
+
+- "Real-time crowd simulation using fuzzy logic"
+by Abdulkadir Sengür, Bülent Özgüç, and Yücel Yemez.
+
+- "Crowd simulation with interactive steering"
+by Julien Pettre, Stephane Donikian, and Gerard Hegron.
+</code></pre>
+</div>
+
+</section>
+<section id="slide-org5ba98df" data-background-iframe="https://www.youtube.com/embed/8VyxbtFjZcw?start=9" data-background-interactive>
+<div style="">
+<h4 id="org5ba98df">Crowd Simulation</h4>
+</div>
+
+</section>
+<section id="slide-org7ae41c3">
+<h4 id="org7ae41c3">History</h4>
+</section>
+<section id="slide-org7ae41c3-split">
+
+<div id="org863fd09" class="figure">
+<p><img src="./images/gandhi_crowd.png" alt="gandhi_crowd.png" height="200%," width="200%" />
+</p>
+</div>
+
+
+</section>
+<section id="slide-org781ae9f" data-background="./images/gandhi_call_list.png" data-background-size="600px">
+<h4 id="org781ae9f">Call Record</h4>
+</section>
+<section id="slide-org781ae9f-split" data-background="./images/gandhi_call_list.png" data-background-size="600px">
+<div class="org-src-container">
+
+<pre  class="src src-text"   ><code trim>- Gandhi 1982
+- Director: Richard Attenborough
+- Writer: John Briley
+- Over 300,000 extras appeared in the funeral sequence.
+- 200,000 were volunteers.
+- Scene shot on sequence was filmed on January 31, 1981.
+</code></pre>
+</div>
+
+</section>
+<section id="slide-orgb455153" data-background-iframe="https://www.youtube.com/embed/BSR0MOiHKxI?start=67" data-background-interactive>
+<div style="background-size: 200px; ">
+<h4 id="orgb455153">Cleopatra 1963</h4>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgcbe4640" data-background="./images/sim_rave_crowd.jpeg" data-background-size="1000px">
+<h2 id="orgcbe4640">Crowd Simulation</h2>
+</section>
+<section id="slide-org77ffa9d" data-background="./images/vfx_pipeline.jpg" data-background-size="1200px">
+<h3 id="org77ffa9d">VFx Pipeline</h3>
+</section>
+<section id="slide-orged5ed1a">
+<h4 id="orged5ed1a">Workflows</h4>
+<p>
+Digital Production in our context began with films like Terminator 2
+and Jurassic Park in the late 1990s.
+</p>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">Instanced Crowd</li>
+<li data-fragment-index="2" class="fragment roll-in">Simulated Crowd</li>
+
+</ul>
+</section>
+<section id="slide-orge0d8553">
+<h4 id="orge0d8553">Parameters to judge a workflow</h4>
+<ul>
+<li>Time</li>
+<li>Complexity</li>
+<li>Quality</li>
+<li>Acceptance</li>
+
+</ul>
+
+</section>
+<section id="slide-org9fddd0f" data-background="./images/agents.jpg" data-background-size="1200px">
+<h3 id="org9fddd0f">Agents</h3>
+</section>
+<section id="slide-orgb29661d" data-background="./images/props.jpg" data-background-size="800px">
+<h3 id="orgb29661d">Props</h3>
+</section>
+<section id="slide-org734af89" data-background="./images/OIP.jpeg" data-background-size="800px">
+<h3 id="org734af89">Obstacles</h3>
+</section>
+<section id="slide-org482e332">
+<h4 id="org482e332">Types Of Obstacles</h4>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">Static Obstacles.</li>
+<li data-fragment-index="2" class="fragment roll-in">Dynamic Obstacles.</li>
+
+</ul>
+
+</section>
+<section id="slide-org200f9a1">
+<h3 id="org200f9a1">Agent Behaviour Complexity (Not AI)</h3>
+<div class="outline-text-3" id="text-org200f9a1">
+</div>
+</section>
+<section id="slide-orgcf73864">
+<h4 id="orgcf73864">Types of Agent Behaviour</h4>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">Collective Intelligence.</li>
+<li data-fragment-index="2" class="fragment roll-in">Follow Leader.</li>
+<li data-fragment-index="3" class="fragment roll-in">Inherit Leadership.</li>
+
+</ul>
+
+</section>
+<section id="slide-orga2f3a14">
+<h3 id="orga2f3a14">AI</h3>
+
+</section>
+</section>
+<section>
+<section id="slide-org699a738">
+<h2 id="org699a738">Producing a Crowd Scene</h2>
+<div class="outline-text-2" id="text-org699a738">
+</div>
+</section>
+<section id="slide-orgd96eee1" data-background="./images/film_extras.jpg" data-background-size="400px" data-background-position="absolute" height: 200px; bottom: -300px; border-radius: 10px; padding: 20px>
+<h3 id="orgd96eee1">Film Extras</h3>
+</section>
+<section id="slide-orgcc6b814">
+<h4 id="orgcc6b814">Logistics Involved:</h4>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">Costume</li>
+<li data-fragment-index="2" class="fragment roll-in">Location</li>
+
+</ul>
+</section>
+<section id="slide-org83b2320" data-background-iframe="https://player.vimeo.com/video/262968687" data-background-interactive>
+<div style="background-size: 200px; ">
+<h3 id="org83b2320">Point Instanced Crowd</h3>
+</div>
+</section>
+<section id="slide-org9c95a3c">
+<h3 id="org9c95a3c">Logistics Involved</h3>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">Costume</li>
+<li data-fragment-index="2" class="fragment roll-in">Location</li>
+<li data-fragment-index="3" class="fragment roll-in">Compositing</li>
+<li data-fragment-index="4" class="fragment roll-in">Keying</li>
+<li data-fragment-index="5" class="fragment roll-in">Rotoscopy</li>
+<li data-fragment-index="6" class="fragment roll-in">3D Integration</li>
+
+</ul>
+
+</section>
+<section id="slide-org2241985">
+<h3 id="org2241985">Simulated Crowd</h3>
+</section>
+<section id="slide-orgd3268f1">
+<h3 id="orgd3268f1">Film Extras Vs CGi Crowd</h3>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org9e4ca97">
+<h2 id="org9e4ca97">Writing Crowd Scenes</h2>
+<div class="outline-text-2" id="text-org9e4ca97">
+</div>
+</section>
+<section id="slide-orgb2699df" data-background="./images/crowd_philosophy.jpg" data-background-size="1000px">
+<h3 id="orgb2699df">Philosophical Aspect</h3>
+</section>
+<section id="slide-org66d5234">
+<h4 id="org66d5234">To consider:</h4>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">The power of collective action.</li>
+<li data-fragment-index="2" class="fragment roll-in">The dangers of conformity.</li>
+<li data-fragment-index="3" class="fragment roll-in">The complexity of human relationships</li>
+<li data-fragment-index="4" class="fragment roll-in">The desire for social connections</li>
+
+</ul>
+
+</section>
+<section id="slide-org815df26" data-background="./images/schindler_list.jpg" data-background-size="1000px">
+<h3 id="org815df26">Design Aspect</h3>
+</section>
+<section id="slide-orgb177242">
+<h4 id="orgb177242">To consider:</h4>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">Realism</li>
+<li data-fragment-index="2" class="fragment roll-in">Atmosphere</li>
+<li data-fragment-index="3" class="fragment roll-in">Social Commentary</li>
+<li data-fragment-index="4" class="fragment roll-in">Symbolism</li>
+<li data-fragment-index="5" class="fragment roll-in">Narrative</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgbbd7cc2">
+<h2 id="orgbbd7cc2">Crowd Simulation Beyond Filmmaking</h2>
+<ul>
+<li>Games</li>
+<li>Real Life Scenarios</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org0fe8677">
+<h2 id="org0fe8677">Conclusion</h2>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber: true,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>
