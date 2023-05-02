@@ -1,0 +1,204 @@
+#+TITLE: Crowd Simulation
+#+AUTHOR: Aviik Chakraborty
+#+EMAIL: avik.c@whistlingwoods.net
+#+OPTIONS: toc:nil num:nil
+
+:REVEAL_PROPERTIES:
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_INIT_OPTIONS: slideNumber: true
+#+REVEAL_THEME: night
+#+REVEAL_TITLE_SLIDE: %t
+:END:
+
+* Outline
+- Introduction and history
+- Simulated Crowd in Films
+- Writing and Producing Crowd Scenes
+- Other Applications of Crowd Simulation
+
+
+* What is Crowds Simulation?
+#+REVEAL: split
+#+ATTR_HTML: :height 200%, :width 200%
+[[./images/crwd_wiki.png]]
+
+#+REVEAL: split
+#+BEGIN_SRC text
+  My way of putting it all togther:
+
+  Replication of a real word situation where a bunch of
+  assets are moving along or interacting with each other.
+#+END_SRC
+
+
+#+REVEAL: split
+#+ATTR_HTML: :height 200%, :width 200%
+[[./images/crwd_acm.png]]
+
+
+#+REVEAL: split
+#+BEGIN_SRC text
+- "Crowd Simulation" by Daniel Thalmann and Soraia Raupp Musse,
+published in the ACM SIGGRAPH Computer Graphics journal in 2007.
+
+- "Real-time crowd simulation using fuzzy logic"
+by Abdulkadir Sengür, Bülent Özgüç, and Yücel Yemez.
+
+- "Crowd simulation with interactive steering"
+by Julien Pettre, Stephane Donikian, and Gerard Hegron.
+#+END_SRC
+
+*** Crowd Simulation
+:PROPERTIES:
+:reveal_background_iframe: https://www.youtube.com/embed/8VyxbtFjZcw?start=9
+:END:
+
+*** History
+
+#+REVEAL: split
+#+ATTR_HTML: :height 200%, :width 200%
+[[./images/gandhi_crowd.png]]
+
+
+*** Call Record
+    :PROPERTIES:
+    :reveal_background: ./images/gandhi_call_list.png
+    :reveal_background_size: 600px
+    :END:
+
+    #+REVEAL: split
+    #+BEGIN_SRC text
+      - Gandhi 1982
+      - Director: Richard Attenborough
+      - Writer: John Briley
+      - Over 300,000 extras appeared in the funeral sequence.
+      - 200,000 were volunteers.
+      - Scene shot on sequence was filmed on January 31, 1981.
+    #+END_SRC
+
+*** Cleopatra 1963
+:PROPERTIES:
+:reveal_background_iframe: https://www.youtube.com/embed/BSR0MOiHKxI?start=67
+:reveal_background_size: 200px
+:END:
+
+* Crowd Simulation
+:PROPERTIES:
+:reveal_background: ./images/sim_rave_crowd.jpeg
+:reveal_background_size: 1000px
+:END:
+** VFx Pipeline
+:PROPERTIES:
+:reveal_background: ./images/vfx_pipeline.jpg
+:reveal_background_size: 1200px
+:END:
+
+*** Workflows
+Digital Production in our context began with films like Terminator 2
+and Jurassic Park in the late 1990s.
+#+ATTR_REVEAL: :frag (roll-in roll-in) :frag_idx (1 2)
+ * Instanced Crowd
+ * Simulated Crowd
+*** Parameters to judge a workflow
+ * Time
+ * Complexity
+ * Quality
+ * Acceptance
+
+** Agents
+:PROPERTIES:
+:reveal_background: ./images/agents.jpg
+:reveal_background_size: 1200px
+:END:
+** Props
+:PROPERTIES:
+:reveal_background: ./images/props.jpg
+:reveal_background_size: 800px
+:END:
+** Obstacles
+:PROPERTIES:
+:reveal_background: ./images/OIP.jpeg
+:reveal_background_size: 800px
+:END:
+
+*** Types Of Obstacles
+#+ATTR_REVEAL: :frag (roll-in roll-in) :frag_idx (1 2)
+   * Static Obstacles.
+   * Dynamic Obstacles.
+
+** Agent Behaviour Complexity (Not AI)
+*** Types of Agent Behaviour
+#+ATTR_REVEAL: :frag (roll-in roll-in roll-in) :frag_idx (1 2 3)
+   * Collective Intelligence.
+   * Follow Leader.
+   * Inherit Leadership.
+
+** AI
+
+* Producing a Crowd Scene
+** Film Extras
+:PROPERTIES:
+:reveal_background: ./images/film_extras.jpg
+:reveal_background_size: 400px
+:reveal_background_position: absolute
+:reveal_extra_attr: height: 200px; bottom: -300px; border-radius: 10px; padding: 20px
+:END:
+*** Logistics Involved:
+#+ATTR_REVEAL: :frag (roll-in roll-in) :frag_idx (1 2 3 4)
+   * Costume
+   * Location
+** Point Instanced Crowd
+:PROPERTIES:
+:reveal_background_iframe: https://player.vimeo.com/video/262968687
+:reveal_background_size: 200px
+:END:
+** Logistics Involved
+#+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in roll-in roll-in) :frag_idx (1 2 3 4 5 6)
+ * Costume
+ * Location
+ * Compositing
+ * Keying
+ * Rotoscopy
+ * 3D Integration
+
+** Simulated Crowd
+** Film Extras Vs CGi Crowd
+
+
+* Writing Crowd Scenes
+
+** Philosophical Aspect
+:PROPERTIES:
+:reveal_background: ./images/crowd_philosophy.jpg
+:reveal_background_size: 1000px
+:END:
+
+*** To consider:
+#+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in) :frag_idx (1 2 3 4)
+   * The power of collective action.
+   * The dangers of conformity.
+   * The complexity of human relationships
+   * The desire for social connections
+
+** Design Aspect
+:PROPERTIES:
+:reveal_background: ./images/schindler_list.jpg
+:reveal_background_size: 1000px
+:END:
+
+*** To consider:
+#+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in roll-in) :frag_idx (1 2 3 4 5)
+   * Realism
+   * Atmosphere
+   * Social Commentary
+   * Symbolism
+   * Narrative
+
+* Crowd Simulation Beyond Filmmaking
+- Games
+- Real Life Scenarios
+** Audience Evacuation Reports
+#+reveal: split
+[[./images/evacuationsigns.jpg]]
+
+* Conclusion
