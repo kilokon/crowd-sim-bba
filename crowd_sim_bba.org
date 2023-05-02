@@ -162,7 +162,28 @@ and Jurassic Park in the late 1990s.
  * 3D Integration
 
 ** Simulated Crowd
+:PROPERTIES:
+:reveal_background_iframe: https://www.youtube.com/embed/w86sDrAtq-0?start=6
+:END:
+** Logistics Involved
+#+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in roll-in roll-in roll-in) :frag_idx (1 2 3 4 5 6 7)
+ * Model
+ * Shade
+ * Rig
+ * Animate
+ * Light
+ * Render
+ * Compose
 ** Film Extras Vs CGi Crowd
+*** Film Extras
+:PROPERTIES:
+:reveal_background_iframe: https://www.youtube.com/embed/lBQVMJ8dukg
+:END:
+
+*** CGI Crowd
+:PROPERTIES:
+:reveal_background_iframe: https://www.youtube.com/embed/JYvQbBXw94k
+:END:
 
 
 * Writing Crowd Scenes
@@ -202,3 +223,10 @@ and Jurassic Park in the late 1990s.
 [[./images/evacuationsigns.jpg]]
 
 * Conclusion
+
+* Contact
+avik.c@whistlingwoods.net
+
+#+reveal: split
+#+ATTR_HTML: :height 200px, :width 200px
+[[./images/qrcode.png]]
